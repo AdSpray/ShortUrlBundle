@@ -1,15 +1,14 @@
 {
-    "name": "biozshock/short-url-bundle",
+    "name": "alanmastro/short-url-bundle",
     "description": "Provides a service and twig extension for getting short urls like http://your.host/~short",
     "keywords": ["url", "short url", "shortener"],
-    "homepage": "https://github.com/biozshock/ShortUrlBundle",
+    "homepage": "https://github.com/alanmastro/ShortUrlBundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "Artem Lopata",
-            "email": "biozshock@gmail.com",
-            "homepage": "http://biozshock.com/"
+            "name": "Marco Bicchi",
+            "email": "marco.bicchi@gmail.com"
         }
     ],
     "require": {
