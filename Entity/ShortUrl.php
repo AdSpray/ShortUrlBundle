@@ -20,34 +20,33 @@ use Doctrine\ORM\Mapping as ORM,
  * @author Artem Lopata <biozshock@gmail.com>
  *
  * @ORM\Entity
- * @ORM\Table(name="ShortUrl",indexes={
- *      @ORM\Index(columns={"shortUrl", "clicks"})
- * })
+ * @ORM\Table(name="url_shortener")
  */
 class ShortUrl
 {
     /**
+     * @var integer
+     * @ORM\Column(name="id_short_url", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
 
     /**
      * @var string
-     * @ORM\Column(name="longUrl", type="string")
+     * @ORM\Column(name="long_url", type="string", nullable=false)
      */
     protected $long;
 
     /**
      * @var string
-     * @ORM\Column(name="shortUrl", type="string", length=200)
+     * @ORM\Column(name="short_url", type="string", length=200, nullable=false)
      */
     protected $short;
 
     /**
      * @var int
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="clicks", type="integer", nullable=false)
      */
     protected $clicks = 0;
 
