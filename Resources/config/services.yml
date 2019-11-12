@@ -5,14 +5,14 @@ parameters:
 
 services:
     bumz_short_url.shortener_base:
-        class: %bumz_short_url.shortener_base.class%
+        class: "%bumz_short_url.shortener_base.class%"
 
     bumz_short_url.shortener:
-        class: %bumz_short_url.shortener.class%
-        arguments: [@bumz_short_url.shortener.base, @doctrine.orm.entity_manager]
+        class: "%bumz_short_url.shortener.class%"
+        arguments: ["@bumz_short_url.shortener.base", "@doctrine.orm.entity_manager"]
 
     bumz_short_url.twig.extension:
-            class: %bumz_short_url.twig.extension.class%
-            arguments: [@bumz_short_url.shortener]
+            class: "%bumz_short_url.twig.extension.class%"
+            arguments: ["@bumz_short_url.shortener"]
             tags:
                 -  { name: twig.extension }
