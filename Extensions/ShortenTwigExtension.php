@@ -42,7 +42,7 @@ class ShortenTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'shortenUrl'  => new \Twig_SimpleFilter($this, 'shortenUrl'),
+            'shortenUrl'  => new \Twig_SimpleFilter('shorten_url', 'shortenUrl'),
         );
     }
 
